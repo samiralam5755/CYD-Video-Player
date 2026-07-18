@@ -47,6 +47,8 @@ The studio is a fully standalone Windows application that **works 100% offline**
 ## PCM5102A Wiring
 * **Audio DAC**: PCM5102A (I2S configuration: BCK -> GPIO 4, LRCK -> GPIO 22, DIN -> GPIO 27)
 * Note: Make sure to short the GND bridge pads on the PCM5102A board (SCK, FLT, DMP, FMT, BYP) to configure it for internal system clock operations.*
+* Check out the [PCM5102A with CYD](https://github.com/hexeguitar/ESP32_TFT_PIO/blob/main/Pics/CYD28_PCM5102A.jpg) for more information.
+
 ---
 ## 💬 Help & Support
 If you run into issues, need custom builds, or want to explore matching hardware accessories:
