@@ -46,6 +46,7 @@ The studio is a fully standalone Windows application that **works 100% offline**
 ---
 ## PCM5102A Wiring
 * **Audio DAC**: PCM5102A (I2S configuration: BCK -> GPIO 4, LRCK -> GPIO 22, DIN -> GPIO 27)
+
 *Note: Make sure to short the GND bridge pads on the PCM5102A board (SCK, FLT, DMP, FMT, BYP) to configure it for internal system clock operations.*
 ---
 ## 💬 Help & Support
