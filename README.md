@@ -1,7 +1,6 @@
 # CYD Video Player & Conversion Studio 🎬
 Welcome to the ultimate Video Player and Conversion Studio ecosystem for the **Cheap Yellow Display (CYD)** (ESP32-2432S028R). This project offers a high-performance, lag-free MJPEG video player with synchronized I2S MP3 audio playback, touch controls, volume/brightness gestures, and seek support.
-> [!IMPORTANT]
-> This repository provides the pre-compiled binaries and official conversion tools. The core player software is closed-source.
+
 ---
 ## ⚡ Quick Start & Installation
 You can get the video player running on your CYD board in less than 2 minutes using our web tools.
@@ -24,6 +23,7 @@ The video player reads media files directly from a FAT32-formatted Micro SD Card
       ├── 🎵 movie1.mp3        (Audio track - must match video filename)
       ├── 📄 movie1.idx        (Optional index file for instant scrubbing/seeking)
       ├── 🎬 holiday.mjpeg
+      ├── 📄 holiday.idx
       └── 🎵 holiday.mp3
 ```
 > [!NOTE]  
@@ -36,18 +36,15 @@ The studio is a fully standalone Windows application that **works 100% offline**
 1. Open **[CYD Video Conversion Studio.exe](./CYD%20Video%20Conversion%20Studio.exe)**.
 2. Select your **Board Preset** (e.g., `CYD 2.8" (Landscape)` for `320x240` resolution).
 3. Browse and select your **Source Video** file.
-4. Set your target FPS (20-30 FPS recommended) and JPEG Quality.
+4. Set your target FPS (30 FPS recommended) and JPEG Quality.
 5. Click **Convert** to generate the outputs.
 6. The tool will output:
    * A `.mjpeg` file (compressed video).
    * A `.mp3` file (optimized audio stream).
-   * A `.idx` file (pre-calculated frame index for **instant scrubbing and seeking**).
+   * A `.idx` file (pre-calculated IDX).
 7. Copy these three files into the `videos/` folder of your SD card.
 ---
-## 🛠️ Board Compatibility & Wiring
-* **MCU**: ESP32 (WROOM-32)
-* **Display**: ILI9341 / ST7789 (`320x240` SPI interface)
-* **Touch Controller**: XPT2046 (SPI interface)
+## PCM5102A Wiring
 * **Audio DAC**: PCM5102A (I2S configuration: BCK -> GPIO 4, LRCK -> GPIO 22, DIN -> GPIO 27)
 ---
 ## 💬 Help & Support
